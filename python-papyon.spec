@@ -14,6 +14,7 @@ BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 Requires:	python >= 1:2.5
 Requires:	python-pyOpenSSL
+Requires:	python-Crypto
 Requires:	python-pygobject >= 2.10
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
