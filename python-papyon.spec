@@ -1,20 +1,20 @@
 %define 	module	papyon
 Summary:	An implementation of the MSN Messenger Protocol
 Name:		python-%{module}
-Version:	0.3.3
-Release:	0.1
+Version:	0.4.0
+Release:	1
 License:	GPL v2+
 Group:		Development/Languages/Python
-Source0:	%{module}.tar.bz2
-# Source0-md5:	8497be52702c8abdaa1028f8325042a4
-URL:		http://github.com/Kjir/papyon/tree/master
+Source0:	http://telepathy.freedesktop.org/releases/papyon/papyon-%{version}.tar.gz
+# Source0-md5:	7b59ce604d475b9a9805243af5a22060
+URL:		http://telepathy.freedesktop.org/wiki/Papyon
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-pyOpenSSL
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 Requires:	python >= 1:2.5
-Requires:	python-pyOpenSSL
 Requires:	python-Crypto
+Requires:	python-pyOpenSSL
 Requires:	python-pygobject >= 2.10
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,7 +24,7 @@ papyon is a library, written in Python, for accessing the MSN instant
 messaging service.
 
 %prep
-%setup -q -n %{module}
+%setup -q -n %{module}-%{version}
 
 %build
 %{__python} setup.py build
@@ -45,6 +45,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README doc/user-api.conf
 %{py_sitescriptdir}/papyon
-%if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/papyon-*.egg-info
-%endif
