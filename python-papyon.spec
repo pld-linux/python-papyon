@@ -1,12 +1,12 @@
 %define 	module	papyon
 Summary:	An implementation of the MSN Messenger Protocol
 Name:		python-%{module}
-Version:	0.4.0
+Version:	0.4.6
 Release:	1
 License:	GPL v2+
 Group:		Development/Languages/Python
 Source0:	http://telepathy.freedesktop.org/releases/papyon/papyon-%{version}.tar.gz
-# Source0-md5:	7b59ce604d475b9a9805243af5a22060
+# Source0-md5:	a486d2ae3adf02573bb6e7b0f4fe7bd4
 URL:		http://telepathy.freedesktop.org/wiki/Papyon
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-pyOpenSSL
