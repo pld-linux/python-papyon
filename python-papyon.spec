@@ -9,6 +9,7 @@ Source0:	http://telepathy.freedesktop.org/releases/papyon/papyon-%{version}.tar.
 # Source0-md5:	658a77085a337635a6effd4262847835
 URL:		http://telepathy.freedesktop.org/wiki/Papyon
 BuildRequires:	python >= 1:2.5
+BuildRequires:	python-Crypto
 BuildRequires:	python-devel
 BuildRequires:	python-pyOpenSSL
 BuildRequires:	python-pygobject
