@@ -2,7 +2,7 @@
 Summary:	An implementation of the MSN Messenger Protocol
 Name:		python-%{module}
 Version:	0.4.8
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Development/Languages/Python
 Source0:	http://telepathy.freedesktop.org/releases/papyon/papyon-%{version}.tar.gz
