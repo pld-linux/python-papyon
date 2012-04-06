@@ -6,11 +6,12 @@
 Summary:	An implementation of the MSN Messenger Protocol
 Name:		python-%{module}
 Version:	0.5.6
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Development/Languages/Python
 Source0:	http://www.freedesktop.org/software/papyon/releases/papyon-%{version}.tar.gz
 # Source0-md5:	7b9a723e5ba6ee82a9c391676144ad29
+Patch0:		%{name}-farstream.patch
 URL:		http://www.freedesktop.org/wiki/Software/papyon
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-Crypto
@@ -21,7 +22,7 @@ BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 Requires:	python >= 1:2.5
 Requires:	python-Crypto >= 2.0.0
-Requires:	python-farsight2
+Requires:	python-farstream
 Requires:	python-gstreamer >= 0.10
 Requires:	python-pyOpenSSL >= 0.6
 Requires:	python-pygobject >= 2.10.1
@@ -34,6 +35,7 @@ messaging service.
 
 %prep
 %setup -q -n %{module}-%{version}
+%patch0 -p1
 
 %build
 %{__python} setup.py build
