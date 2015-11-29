@@ -20,7 +20,7 @@ BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-pyOpenSSL
 BuildRequires:	python-pygobject
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	python-Crypto >= 2.0.0
 Requires:	python-farstream
 Requires:	python-libs >= 1:2.5
