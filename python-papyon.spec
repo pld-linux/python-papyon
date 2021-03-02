@@ -10,17 +10,17 @@ Version:	0.5.6
 Release:	3
 License:	GPL v2+
 Group:		Development/Languages/Python
-Source0:	http://www.freedesktop.org/software/papyon/releases/papyon-%{version}.tar.gz
+Source0:	https://www.freedesktop.org/software/papyon/releases/papyon-%{version}.tar.gz
 # Source0-md5:	7b9a723e5ba6ee82a9c391676144ad29
 Patch0:		%{name}-farstream.patch
-URL:		http://www.freedesktop.org/wiki/Software/papyon
+URL:		https://www.freedesktop.org/wiki/Software/papyon/
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-Crypto
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-pyOpenSSL
 BuildRequires:	python-pygobject
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.710
+BuildRequires:	rpmbuild(macros) >= 1.714
 Requires:	python-Crypto >= 2.0.0
 Requires:	python-farstream
 Requires:	python-libs >= 1:2.5
@@ -48,6 +48,7 @@ usługi komunikatora MSN.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %py_install
 
 %py_ocomp $RPM_BUILD_ROOT%{py_sitescriptdir}
